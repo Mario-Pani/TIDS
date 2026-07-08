@@ -1,0 +1,7 @@
+# Optional dependencies for TIDS
+
+# AutoCAD drawing support (Windows only)
+# Install with: pip install -r requirements-optional.txt
+pyautocad>=0.2.6
+
+# Future: PDF export, batch processing, etc.

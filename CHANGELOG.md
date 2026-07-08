@@ -2,6 +2,22 @@
 
 ## Version History
 
+### v1.2.1 (2026-07-08) - Optional CAD & Dependencies
+- ✨ Made AutoCAD (pyautocad) optional dependency
+- 🎯 App now works without CAD installed (Draw button disabled)
+- 📋 Created `requirements-optional.txt` for optional features
+- 🔧 Added CAD availability checker (`cad_check.py`)
+- 📖 Improved documentation for optional dependencies
+- ⚠️ Draw button shows warning if CAD not available
+
+**Breaking Changes:** None
+
+**Migration:** For CAD support: `pip install -r requirements-optional.txt`
+
+**Files Changed:** requirements.txt, tab_new_job.py, INSTALL.md
+
+---
+
 ### v1.2.0 (2026-07-08) - Installation & Packaging
 - ✨ Added automatic installer (`install.bat`)
 - ✨ Added update checker (`check_updates.bat`)

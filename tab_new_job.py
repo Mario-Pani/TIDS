@@ -11,6 +11,7 @@ from app_utils import (
     rows_to_text,
 )
 from cad_bridge import draw_smart_coils
+from cad_check import is_cad_available
 from data_processor import process_files
 from ui_text import t
 
@@ -172,12 +173,19 @@ def render_new_job_tab(settings, lang):
         )
 
     with col_action2:
+        cad_available = is_cad_available()
+        draw_disabled = not cad_available
+        draw_button_label = t(lang, "draw")
+        if draw_disabled:
+            draw_button_label += " ⚠️"
+        
         if st.button(
-            t(lang, "draw"),
+            draw_button_label,
             type="primary",
             icon=":material/architecture:",
             use_container_width=True,
-            help=t(lang, "draw_help"),
+            disabled=draw_disabled,
+            help=t(lang, "draw_help") if not draw_disabled else "AutoCAD drawing disabled. Install: pip install -r requirements-optional.txt",
         ):
             with st.spinner(t(lang, "connecting_cad")):
                 success, message = draw_smart_coils(edited_merged_data)
@@ -186,6 +194,9 @@ def render_new_job_tab(settings, lang):
                     st.success(message)
                 else:
                     st.error(message)
+        
+        if draw_disabled:
+            st.caption("💡 Tip: `pip install -r requirements-optional.txt` para habilitar dibujo en AutoCAD")
 
     preview_tab_1, preview_tab_2 = st.tabs([t(lang, "preview_tab"), t(lang, "drawing_preview_tab")])
 

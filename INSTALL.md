@@ -23,7 +23,19 @@
 
 - **Conexión VPN activada** (para acceder a F:\)
 
-- **AutoCAD instalado** (opcional, solo si usas la función "Draw")
+### Dependencias Opcionales:
+
+#### AutoCAD Drawing Support
+Si quieres usar la función "Draw" en AutoCAD:
+```bash
+pip install -r requirements-optional.txt
+```
+
+**Requisitos:**
+- AutoCAD instalado en Windows
+- Python en la misma máquina que AutoCAD
+
+**Si NO instalas esto:** La app funciona normalmente, pero el botón "Draw" estará deshabilitado (aparecerá con ⚠️)
 
 ---
 
@@ -32,8 +44,13 @@
 Si el instalador no funciona, ejecuta manualmente:
 
 ```bash
-# En la carpeta del proyecto:
+# Dependencias core:
 pip install -r requirements.txt
+
+# Dependencias opcionales (si quieres AutoCAD):
+pip install -r requirements-optional.txt
+
+# Iniciar app:
 streamlit run app.py
 ```
 
@@ -42,7 +59,8 @@ streamlit run app.py
 ## Archivos incluidos
 
 - `app.py` - Aplicación principal (Streamlit)
-- `requirements.txt` - Dependencias Python
+- `requirements.txt` - Dependencias obligatorias
+- `requirements-optional.txt` - Dependencias opcionales (CAD)
 - `config.local.json` - Configuración (rutas F:\)
 - `TIDS.bat` - Launcher de la app
 - `install.bat` - Instalador de dependencias
@@ -59,6 +77,17 @@ streamlit run app.py
 
 ### Error: "streamlit: command not found"
 → Abre una nueva ventana de PowerShell y reinicia el instalador
+
+### Error: "No module named 'pyautocad'"
+→ Normal si no quieres usar AutoCAD. La app funciona sin él.
+→ Si quieres dibujar en CAD, instala:
+```bash
+pip install -r requirements-optional.txt
+```
+→ Si `pip install pyautocad` falla, puede ser porque:
+  - No tienes VC++ Build Tools instalado
+  - AutoCAD no está en la máquina
+  - En ese caso, la app sigue funcionando sin la función Draw
 
 ### La app es lenta
 → Normal en VPN. Los archivos están en red (F:\). El cacheo optimiza esto.
