@@ -18,4 +18,10 @@ htmlcov/
 # OS / editor files
 .DS_Store
 Thumbs.db
+
+# PyInstaller build outputs (if someone tries exe packaging)
+build/
+dist/
+*.spec
+TIDS.exe
 .vscode/

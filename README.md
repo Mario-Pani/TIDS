@@ -3,6 +3,22 @@
 ## Overview
 TIDS is an engineering utility to merge insulation design parameters and optionally draw coil cross-sections in AutoCAD.
 
+## Quick Start
+
+### Windows Installer (Recommended)
+1. Download this repository
+2. Double-click `install.bat`
+3. Follow the on-screen instructions
+4. Click "TIDS" on your desktop to launch
+
+### Manual Setup
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+See [INSTALL.md](INSTALL.md) for detailed installation instructions.
+
 ## Project Structure
 - app.py: Thin Streamlit entrypoint that wires settings and main tabs.
 - ui_settings.py: Settings popover UI (path edit, validate, open path/URL).
