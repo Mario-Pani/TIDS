@@ -27,12 +27,19 @@ streamlit run app.py
 - tests/test_data_processor.py: unit tests for parser and merge behavior.
 
 ## Requirements
-- Windows with AutoCAD installed and available through COM.
-- Python 3.11+ recommended.
-- Python packages:
+- Windows
+- Python 3.11+
 
+## Python Packages
+
+Core dependencies:
 ```bash
-pip install streamlit pyautocad pywin32
+pip install -r requirements.txt
+```
+
+Optional (for AutoCAD drawing):
+```bash
+pip install pyautocad
 ```
 
 ## Run
