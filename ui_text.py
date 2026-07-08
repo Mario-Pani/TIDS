@@ -1,0 +1,173 @@
+LANG_OPTIONS = {
+    "en": "English",
+    "es": "Espanol",
+}
+
+
+PATH_LABELS = {
+    "en": {
+        "spx_goldsboro": "Base Folder Path",
+        "supplementary_file": "Supplementary File Path",
+        "nuevo_diseno": "New Design Path",
+        "manuales": "Manuals Path",
+        "disenos": "Designs Path",
+        "dups_template_file": "DUPS Template File",
+        "schedule_url": "Schedule URL",
+    },
+    "es": {
+        "spx_goldsboro": "Ruta de Carpeta Base",
+        "supplementary_file": "Ruta de Archivo Suplementario",
+        "nuevo_diseno": "Ruta de Nuevo Diseno",
+        "manuales": "Ruta de Manuales",
+        "disenos": "Ruta de Disenos",
+        "dups_template_file": "Ruta de Plantilla DUPS",
+        "schedule_url": "URL de Schedule",
+    },
+}
+
+
+TEXTS = {
+    "en": {
+        "app_title": "TIDS",
+        "app_subtitle": "Transformer Insulation Design System",
+        "tab_dups": "DUPS",
+        "tab_new_job": "NEW JOB",
+        "tab_schedule": "SCHEDULE",
+        "settings_title": "Configured Paths",
+        "language_label": "Language",
+        "select_path_to_edit": "Select path to edit",
+        "path": "Path",
+        "save_path": "Save Path",
+        "open_folder": "Open Folder",
+        "validate_paths": "Validate Paths",
+        "path_updated_reloading": "Path updated. Reloading configuration...",
+        "path_empty": "Path is empty.",
+        "opened_url": "Opened URL",
+        "could_not_open_url": "Could not open URL: {exc}",
+        "path_does_not_exist": "Path does not exist: {path}",
+        "opened_path": "Opened: {path}",
+        "could_not_open_path": "Could not open path: {exc}",
+        "path_validation_issues": "Path validation issues found:",
+        "all_paths_valid": "All configured paths are valid.",
+        "current_paths": "Current paths",
+        "dups_subheader": "DUPS",
+        "designs_path_empty": "Designs path is empty. Update it in Settings > Configured Paths.",
+        "designs_path_missing": "Designs path does not exist or is not a folder: {path}",
+        "dups_template_path_empty": "DUPS template file path is empty. Update it in Settings > Configured Paths.",
+        "dups_template_missing": "DUPS template file was not found: {path}",
+        "designs_root_caption": "Designs root: {path}",
+        "using_template_caption": "Using template: {path}",
+        "source_design_folder": "Source design folder",
+        "source_design_folder_placeholder": "Type the existing design folder name",
+        "new_folder_name": "New folder name",
+        "new_folder_name_placeholder": "Type the new design folder name",
+        "duplicate_folder": "Duplicate Folder",
+        "progress_starting": "Starting...",
+        "could_not_read_template": "Could not read template file: {exc}",
+        "open": "Open",
+        "new_job_intro": "Upload the .ehv or .txt file received from the customer and supplementary variables to generate the output file and draw in CAD.",
+        "base_file": "1. Base File",
+        "upload_customer_file": "Upload customer file",
+        "extra_values_file": "2. Extra Values File",
+        "using_default_supplementary": "Using default supplementary file:\n{name}",
+        "upload_extra_values": "Upload extra values flat file",
+        "upload_base_to_proceed": "Please upload the base file to proceed. Supplementary file will be loaded from configured path.",
+        "upload_both_to_proceed": "Please upload both files to proceed with the data merge.",
+        "uploaded_files_empty": "One of the uploaded files is empty or unreadable.",
+        "processing_failed": "Processing failed: {exc}",
+        "processing_complete": "Processing Complete! Detected Unit Topology: **{unit_type}**",
+        "supplementary_source": "Supplementary source in use: {name}",
+        "review_edit_merged": "3. Review and Edit Merged File",
+        "download": "Download",
+        "download_help": "Download {name}",
+        "draw": "Draw",
+        "draw_help": "Draw Coils in AutoCAD",
+        "connecting_cad": "Connecting to AutoCAD & generating layers...",
+        "preview_tab": "Preview Edited Merged Data",
+        "drawing_preview_tab": "900 Drawing Preview",
+        "schedule_subheader": "SCHEDULE",
+        "schedule_url_empty": "Schedule URL is empty. Update it in Settings > Configured Paths.",
+        "open_schedule_file": 'Open "2026 Goldsboro Schedule.xlsx"',
+    },
+    "es": {
+        "app_title": "TIDS",
+        "app_subtitle": "Sistema Inteligente de Diseno de Aislamiento para Transformadores",
+        "tab_dups": "DUPS",
+        "tab_new_job": "NEW JOB",
+        "tab_schedule": "SCHEDULE",
+        "settings_title": "Rutas Configuradas",
+        "language_label": "Idioma",
+        "select_path_to_edit": "Selecciona la ruta a editar",
+        "path": "Ruta",
+        "save_path": "Guardar Ruta",
+        "open_folder": "Abrir Carpeta",
+        "validate_paths": "Validar Rutas",
+        "path_updated_reloading": "Ruta actualizada. Recargando configuracion...",
+        "path_empty": "La ruta esta vacia.",
+        "opened_url": "URL abierta",
+        "could_not_open_url": "No se pudo abrir la URL: {exc}",
+        "path_does_not_exist": "La ruta no existe: {path}",
+        "opened_path": "Abierto: {path}",
+        "could_not_open_path": "No se pudo abrir la ruta: {exc}",
+        "path_validation_issues": "Se encontraron problemas de validacion:",
+        "all_paths_valid": "Todas las rutas configuradas son validas.",
+        "current_paths": "Rutas actuales",
+        "dups_subheader": "DUPS",
+        "designs_path_empty": "La ruta de Disenos esta vacia. Actualizala en Settings > Configured Paths.",
+        "designs_path_missing": "La ruta de Disenos no existe o no es carpeta: {path}",
+        "dups_template_path_empty": "La ruta de plantilla DUPS esta vacia. Actualizala en Settings > Configured Paths.",
+        "dups_template_missing": "No se encontro la plantilla DUPS: {path}",
+        "designs_root_caption": "Raiz de Disenos: {path}",
+        "using_template_caption": "Usando plantilla: {path}",
+        "source_design_folder": "Carpeta de diseno origen",
+        "source_design_folder_placeholder": "Escribe el nombre de la carpeta de diseno existente",
+        "new_folder_name": "Nombre de carpeta nueva",
+        "new_folder_name_placeholder": "Escribe el nombre de la nueva carpeta de diseno",
+        "duplicate_folder": "Duplicar Carpeta",
+        "progress_starting": "Iniciando...",
+        "could_not_read_template": "No se pudo leer la plantilla: {exc}",
+        "open": "Abrir",
+        "new_job_intro": "Sube el archivo .ehv o .txt recibido del cliente y las variables suplementarias para generar el archivo de salida y dibujar en CAD.",
+        "base_file": "1. Archivo Base",
+        "upload_customer_file": "Subir archivo del cliente",
+        "extra_values_file": "2. Archivo de Valores Extra",
+        "using_default_supplementary": "Usando archivo suplementario por defecto:\n{name}",
+        "upload_extra_values": "Subir archivo plano de valores extra",
+        "upload_base_to_proceed": "Sube el archivo base para continuar. El archivo suplementario se cargara desde la ruta configurada.",
+        "upload_both_to_proceed": "Sube ambos archivos para continuar con el merge de datos.",
+        "uploaded_files_empty": "Uno de los archivos cargados esta vacio o no se puede leer.",
+        "processing_failed": "El procesamiento fallo: {exc}",
+        "processing_complete": "Procesamiento completo. Topologia detectada: **{unit_type}**",
+        "supplementary_source": "Fuente suplementaria en uso: {name}",
+        "review_edit_merged": "3. Revisar y Editar Archivo Merged",
+        "download": "Descargar",
+        "download_help": "Descargar {name}",
+        "draw": "Dibujar",
+        "draw_help": "Dibujar bobinas en AutoCAD",
+        "connecting_cad": "Conectando a AutoCAD y generando layers...",
+        "preview_tab": "Vista previa del merged editado",
+        "drawing_preview_tab": "Vista previa dibujo 900",
+        "schedule_subheader": "SCHEDULE",
+        "schedule_url_empty": "La URL de Schedule esta vacia. Actualizala en Settings > Configured Paths.",
+        "open_schedule_file": 'Abrir "2026 Goldsboro Schedule.xlsx"',
+    },
+}
+
+
+def _sanitize_lang(lang):
+    if lang in TEXTS:
+        return lang
+    return "en"
+
+
+def t(lang, key, **kwargs):
+    safe_lang = _sanitize_lang(lang)
+    template = TEXTS[safe_lang].get(key) or TEXTS["en"].get(key) or key
+    if kwargs:
+        return template.format(**kwargs)
+    return template
+
+
+def get_path_labels(lang):
+    safe_lang = _sanitize_lang(lang)
+    return PATH_LABELS.get(safe_lang, PATH_LABELS["en"])
