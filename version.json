@@ -11,7 +11,7 @@
     "pywin32": ">=305"
   },
   "optional_dependencies": {
-    "pyautocad": ">=0.2.6",
+    "pyautocad": ">=0.2.0",
     "description": "For AutoCAD drawing support (Windows only with AutoCAD installed)"
   }
 }
