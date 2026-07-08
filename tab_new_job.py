@@ -15,6 +15,14 @@ from data_processor import process_files
 from ui_text import t
 
 
+@st.cache_data(ttl=30, show_spinner=False)
+def _path_is_file(path):
+    try:
+        return os.path.isfile(path)
+    except OSError:
+        return False
+
+
 def _render_editor_styles():
     st.markdown(
         """
@@ -46,7 +54,7 @@ def render_new_job_tab(settings, lang):
     st.markdown(t(lang, "new_job_intro"))
 
     configured_extra_path = settings.get("paths", {}).get("supplementary_file", "")
-    configured_extra_exists = bool(configured_extra_path) and os.path.isfile(configured_extra_path)
+    configured_extra_exists = bool(configured_extra_path) and _path_is_file(configured_extra_path)
 
     st.subheader(t(lang, "base_file"))
     base_file = st.file_uploader(t(lang, "upload_customer_file"), type=["ehv", "txt"], key="base")

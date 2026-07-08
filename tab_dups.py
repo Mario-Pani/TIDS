@@ -6,6 +6,22 @@ from dups_service import duplicate_design_folder
 from ui_text import t
 
 
+@st.cache_data(ttl=30, show_spinner=False)
+def _path_is_dir(path):
+    try:
+        return os.path.isdir(path)
+    except OSError:
+        return False
+
+
+@st.cache_data(ttl=30, show_spinner=False)
+def _path_is_file(path):
+    try:
+        return os.path.isfile(path)
+    except OSError:
+        return False
+
+
 def render_dups_tab(settings, lang):
     st.subheader(t(lang, "dups_subheader"))
     designs_root = settings.get("paths", {}).get("disenos", "")
@@ -19,7 +35,7 @@ def render_dups_tab(settings, lang):
         st.warning(t(lang, "designs_path_empty"))
         return
 
-    if not os.path.isdir(designs_root):
+    if not _path_is_dir(designs_root):
         st.error(t(lang, "designs_path_missing", path=designs_root))
         return
 
@@ -27,7 +43,7 @@ def render_dups_tab(settings, lang):
         st.warning(t(lang, "dups_template_path_empty"))
         return
 
-    if not os.path.isfile(dups_template_file):
+    if not _path_is_file(dups_template_file):
         st.error(t(lang, "dups_template_missing", path=dups_template_file))
         return
 
@@ -79,7 +95,7 @@ def render_dups_tab(settings, lang):
             st.error(message)
 
     open_target_path = st.session_state.get("dups_last_target_path")
-    if st.session_state.get("dups_open_visible") and open_target_path and os.path.exists(open_target_path):
+    if st.session_state.get("dups_open_visible") and open_target_path and _path_is_dir(open_target_path):
         if st.button(t(lang, "open"), use_container_width=True, key="dups_open_btn"):
             try:
                 os.startfile(open_target_path)
