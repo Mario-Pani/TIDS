@@ -19,6 +19,15 @@ streamlit run app.py
 
 See [INSTALL.md](INSTALL.md) for detailed installation instructions.
 
+## Updates
+
+Check for new versions:
+```bash
+check_updates.bat
+```
+
+See [CHANGELOG.md](CHANGELOG.md) for version history.
+
 ## Project Structure
 - app.py: Thin Streamlit entrypoint that wires settings and main tabs.
 - ui_settings.py: Settings popover UI (path edit, validate, open path/URL).

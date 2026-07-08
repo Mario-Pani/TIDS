@@ -65,6 +65,34 @@ streamlit run app.py
 
 ---
 
+## Actualizaciones
+
+### Verificar si hay nuevas versiones:
+```bash
+check_updates.bat
+```
+
+Este script:
+1. Conecta con GitHub
+2. Verifica si hay cambios nuevos
+3. Si los hay, pregunta si deseas actualizar
+4. Descarga e instala automáticamente
+
+### Actualización Manual:
+```bash
+cd C:\ruta\a\TIDS
+git pull origin main
+pip install -r requirements.txt
+```
+
+---
+
+## Historial de Cambios
+
+Ver [CHANGELOG.md](CHANGELOG.md) para lista completa de versiones.
+
+---
+
 ## Contacto
 
 Para reportar problemas o sugerencias: 

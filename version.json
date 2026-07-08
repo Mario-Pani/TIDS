@@ -1,0 +1,14 @@
+{
+  "app_name": "TIDS",
+  "current_version": "1.2.0",
+  "version_date": "2026-07-08",
+  "python_min": "3.11",
+  "github_repo": "Mario-Pani/TIDS",
+  "github_url": "https://github.com/Mario-Pani/TIDS",
+  "release_notes": "Installation & Packaging system, VPN latency fixes, bilingual UI",
+  "dependencies": {
+    "streamlit": ">=1.57.0",
+    "pyautocad": ">=0.2.6",
+    "pywin32": ">=305"
+  }
+}
