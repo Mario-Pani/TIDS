@@ -2,44 +2,18 @@
 
 ## Version History
 
-### v1.2.1 (2026-07-08) - Optional CAD & Dependencies
-- ✨ Made AutoCAD (pyautocad) optional dependency
-- 🎯 App now works without CAD installed (Draw button disabled)
-- 📋 Created `requirements-optional.txt` for optional features
-- 🔧 Added CAD availability checker (`cad_check.py`)
-- 📖 Improved documentation for optional dependencies
-- ⚠️ Draw button shows warning if CAD not available
-
-**Breaking Changes:** None
-
-**Migration:** For CAD support: `pip install -r requirements-optional.txt`
-
-**Files Changed:** requirements.txt, tab_new_job.py, INSTALL.md
-
----
-
-### v1.2.0 (2026-07-08) - Installation & Packaging
-- ✨ Added automatic installer (`install.bat`)
-- ✨ Added update checker (`check_updates.bat`)
-- ✨ Added distribution packager (`make_distribution.bat`)
-- 🐛 Fixed VPN latency issues with path caching (30s TTL)
-- 📦 Corrected schedule_url format in config
-
-**Breaking Changes:** None
-
-**Migration:** For existing users: run `check_updates.bat` to update
-
----
-
-### v1.1.0 (2026-07-07) - Bilingual UI & Modularization
+### v1.1.0 (2026-07-08) - Bilingual UI & Modularization & CAD Optional
 - ✨ Added EN/ES bilingual interface with language selector
 - 🔧 Refactored app.py into modular components (tab_*.py, ui_*.py)
 - 🎯 Separated concerns: UI, services, domain logic
+- 🐛 Fixed VPN latency issues with path caching (30s TTL)
+- 🔧 Made AutoCAD (pyautocad) optional dependency
+- 🎯 App works without CAD installed (Draw button disabled)
 - ✅ All 9 tests passing
 
 **Breaking Changes:** None
 
-**Files Changed:** app.py, ui_text.py, tab_dups.py, tab_new_job.py, tab_schedule.py, ui_settings.py
+**Files:** app.py, ui_text.py, tab_dups.py, tab_new_job.py, tab_schedule.py, ui_settings.py, cad_check.py
 
 ---
 
@@ -51,46 +25,17 @@
 
 ---
 
-## Installation & Updates
+## Installation
 
-### First Time Setup
 ```bash
-# Run installer
-install.bat
-```
-
-### Check for Updates
-```bash
-# Check if new version available
-check_updates.bat
-```
-
-### Manual Update (Git)
-```bash
-cd C:\path\to\TIDS
-git pull origin main
 pip install -r requirements.txt
+streamlit run app.py
 ```
 
----
-
-## Version Format
-
-Follows [Semantic Versioning](https://semver.org/):
-- **MAJOR.MINOR.PATCH**
-- MAJOR: Breaking changes
-- MINOR: New features (backward compatible)
-- PATCH: Bug fixes
-
----
-
-## Upcoming Features (Roadmap)
-
-- [ ] Dark mode support
-- [ ] Export to PDF
-- [ ] Batch file processing
-- [ ] Web deployment (Streamlit Cloud)
-- [ ] Unit type AI detection
+For CAD support:
+```bash
+pip install pyautocad
+```
 
 ---
 

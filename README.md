@@ -5,28 +5,10 @@ TIDS is an engineering utility to merge insulation design parameters and optiona
 
 ## Quick Start
 
-### Windows Installer (Recommended)
-1. Download this repository
-2. Double-click `install.bat`
-3. Follow the on-screen instructions
-4. Click "TIDS" on your desktop to launch
-
-### Manual Setup
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-See [INSTALL.md](INSTALL.md) for detailed installation instructions.
-
-## Updates
-
-Check for new versions:
-```bash
-check_updates.bat
-```
-
-See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 ## Project Structure
 - app.py: Thin Streamlit entrypoint that wires settings and main tabs.
